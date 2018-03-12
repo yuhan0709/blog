@@ -1,5 +1,6 @@
 <template>
-    <div class="forme">
+    <div class="content">
+        <div class="forme">
             <div class="myInformation">
                 <div class="information">
                     <my-information></my-information>
@@ -12,6 +13,7 @@
             </div>
             <div class="clear">
             </div>
+        </div>
     </div>
 </template>
 <script>
@@ -26,30 +28,17 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-    // .forme{
-    //     width: 100%;
-    //     height: 100%;
-    //     // background-color:#D3D3D3;
-    //     padding-top: 45px;
-    // .container{
-    //     width:80%;
-    //     margin:0 auto;
-    // .myInformation{
-    //     float: left;
-    // }
-    // .skillChart{
-    //     float: right;
-    // }
-    // }
-    // }
 *{
     margin:0;
     padding: 0;
+    overflow-x: hidden;
 }
+.content{
+    margin-left:220px;
     .forme{
-        width: 100%;
+        width: 1100px;
         height: 100%;
-        // background-color: aqua;
+        margin: 0 auto;
     .myInformation{
         width: 30%;
         height: 100%;
@@ -62,15 +51,16 @@ export default {
     .skillChart{
         width: 70%;
         height: 100%;
-        float: right;
+        margin-top: -50px;
+        margin-left: 30px;
         .chart{
-            width: 500px;
-            margin-top: -50px;
-            margin-left: 0px;
+            width: 600px;
         }
     }
     .clear{
         clear: both;
     }
+    }
 }
+
 </style>

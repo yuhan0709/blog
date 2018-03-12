@@ -7,7 +7,7 @@ const markdown = require('marked');
 const hljs = require('highlight.js'); 
 app.get("/essey",(req,res)=>{
     var essey = [];
-    fs.readdir(__dirname+"/essey",function(err,files){
+    fs.readdir(__dirname+"/essey",(err,files)=>{
         files.forEach(filename => {
             essey.push(filename.split(".")[0]);
         });
@@ -23,6 +23,31 @@ app.get('/essey/:title',(req,res)=>{
         var markdownContent = data.toString();
         var htmlContent = markdown(markdownContent);
         res.send(htmlContent);
+    })
+})
+app.get('/otheressey',(req,res)=>{
+    var otheressey = [];
+    fs.readdir(__dirname+'/otheressey',(err,files)=>{
+        if(err){
+            console.log(err);
+        }else{
+            files.forEach(filename=>{
+                otheressey.push(filename.split(".")[0]);
+            })
+        }
+        res.send(otheressey);
+    })
+})
+app.get('/otheressey/:title',(req,res)=>{
+    var title = req.params.title+'.md';
+    fs.readFile(__dirname+"/otheressey/"+title,(err,data)=>{
+        if(err){
+            console.log(err);
+        }else{
+            var markdownContent = data.toString();
+            var htmlContent = markdown(markdownContent);
+            res.send(htmlContent);
+        }
     })
 })
 app.listen(8000);

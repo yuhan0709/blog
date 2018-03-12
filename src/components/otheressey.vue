@@ -6,10 +6,8 @@
             <essey-catalog @title="getTitle"></essey-catalog>
         </div>
     </div>
-    <div class="esseyContent">
-        <div class="essey">
-            <essey-content :getTitle="getResponse"></essey-content>
-        </div>
+    <div class="essey">
+        <essey-content :getTitle="getResponse"></essey-content>
     </div>
     <div class="clear">
     </div>
@@ -17,15 +15,14 @@
 </div>
 </template>
 <script>
-import esseyCatalog from '@/components/essey/catalog'
-import esseyContent from '@/components/essey/aessey'
+import esseyCatalog from '@/components/otheressey/catalog'
+import esseyContent from '@/components/otheressey/aessey'
 export default {
     name:"essey",
     data(){
         return{
             getResponse:""
-        }
-        
+        }    
     },
     components:{
         esseyCatalog,
@@ -44,14 +41,17 @@ export default {
 *{
     margin:0;
     padding: 0;
-    // overflow-x: hidden;
 }
-    .econtainer{
-        width:100%;
+.econtainer{
+    margin-left: 220px;
+    height: 100%;
+    .myessey{
+        width: 1000px;
         height: 100%;
-        // background-color: aqua;
+        margin:0 auto
+    }
     .esseyCatalog{
-        width: 18%;
+        width: 15%;
         height: 100%;
         position:fixed;
         padding-top: 40px;
@@ -60,22 +60,16 @@ export default {
        .catalog{
            width: 220px;
            height: 800px;
-           margin:0 auto;
-            
+           margin:0 auto;     
         }
     }
-    .esseyContent{
-        width: 80%;
-        float: right;
-        height:100%;
-        .essey{
-            width: 900px;
-            margin:0 auto;
-            margin-top:40px;
-        }
-        }
+    .essey{
+        width:600px;
+        margin-left: 250px;
+        margin-top:40px;
+    }
     .clear{
         clear: both;
     }
-    }
+}
 </style>

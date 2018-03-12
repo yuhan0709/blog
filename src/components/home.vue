@@ -1,6 +1,6 @@
 <template>
   <transition name="fade">  
-    <div>
+    <div @click="toEssey">
       <img src="../assets/images/homepage.png" class="background" >
       <P class="left_title">MISS</P>
       <P class="right_title">yang's</P>
@@ -16,12 +16,14 @@ export default {
       $('.left_title').animate({"top":"200px"},2000);
       $('.right_title').animate({"bottom":"40px"},2000);
       },500);
+    },
+  methods:{
+    toEssey:function(){
+      this.$router.push({path:'/essey'});
     }
   }
+  }
 
-$(document).click(function(){
-    window.location.href="/#/essey";
-})
 </script>
 <style lang="less" scoped>
 .fade-enter-active, .fade-leave-active {

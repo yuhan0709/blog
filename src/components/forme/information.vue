@@ -42,7 +42,7 @@ export default {
 </script>
 <style lang="less" scoped>
     .forme{
-        margin-left: 50px;
+        margin-left: 20px;
     }
     p {
       font-size: 20px;
