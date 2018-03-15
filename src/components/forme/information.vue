@@ -55,7 +55,7 @@ export default {
       margin-top: 30px;
     }
     table {
-      width: 30%;
+      width: 400px;
       border-collapse: collapse;
       tr:nth-child(odd){
           background-color: #F9F9F9;

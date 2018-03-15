@@ -86,7 +86,9 @@ var options = {
 </script>
 <style lang="less" scoped>
     .skillchart{
-        margin-left: 60px;
+        // margin-left: 60px;
+        margin-left: 20px;
+        margin-top: -45px;
     }
     p {
       font-size: 20px;
@@ -99,8 +101,8 @@ var options = {
       margin-top: 80px;
     }
     #chart{
-        width: 600px;
-        height:400px;
+        width: 550px;
+        height: 400px;
     }
 </style>
 

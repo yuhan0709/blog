@@ -78,9 +78,12 @@ ul {
   padding-left: 0px;
   margin-top: 60px;
   width: 180px;
+  height: 100%;
+  display: flex;
+  flex-flow:column;
   li {
     list-style: none;
-    height: 70px;
+    height:5em;
     width: 150px;
     padding-left: 30px;
     font-size: 13px;

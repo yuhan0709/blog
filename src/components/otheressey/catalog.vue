@@ -16,7 +16,7 @@ export default {
         }
     },
     async mounted(){
-        axios.get('/otheressey').then((response)=>{
+        axios.get('/otherEsseyCatalog').then((response)=>{
             for(var i=0;i<response.data.length;i++){
                 this.catalog.push(response.data[i]);
             }
@@ -38,7 +38,7 @@ export default {
         color:inherit;
     }
     ul{
-        margin-top: 20px;
+        margin-top: 40px;
     }
     ul li{
         list-style: none;

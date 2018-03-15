@@ -54,6 +54,7 @@ export default {
         width: 15%;
         height: 100%;
         position:fixed;
+        top:0;
         padding-top: 40px;
         overflow-y: scroll;
         overflow-x: hidden;

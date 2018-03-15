@@ -1,0 +1,54 @@
+*{
+	margin:0;
+	padding:0;
+}
+a{
+	color:inherit;
+}
+.container h1{
+	text-align: center;
+	padding-bottom: 2px;
+	font-family: "隶书";
+	border-bottom: 2px solid #000000;
+}
+.container{
+	width: 730px;
+	margin:0 auto;
+}
+.left_wrapper{
+	width:150px;
+	height: 300px;
+	background-color: #ffffff;
+	padding-top: 100px;
+	float: left;
+	position: fixed;
+}
+.nav li{
+	border-right: 1px solid #9E9E9E;
+}
+.li_click {
+	font-weight: bolder;
+}
+.right_wrapper {
+	width:500px;
+	float: right;
+	margin-top: 30px;
+
+}
+.li_header{
+	font-size: 20px;
+	padding-bottom:5px;
+	margin-bottom: 20px;
+	width: 120px;
+	border-bottom: 3px solid #000000;
+}
+.content li {
+	list-style-type: none;
+	width: 500px;
+	margin-top: 20px;
+	position: absolute;
+}
+form input{
+	margin-top: 10px;
+	margin-bottom: 20px;
+}

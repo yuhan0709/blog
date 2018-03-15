@@ -1,12 +1,5 @@
 <template>
 <div class="aessey">
-  <!-- <p class="title">{{aessey.title}}</p>
-  <p class="message">
-    <img src="../../assets/images/esseyTime.png">{{aessey.time}}
-    <img src="../../assets/images/esseyauthor.png">{{aessey.author}}
-    <img src="../../assets/images/esseywatch.png">{{aessey.watch}}
-    <img src="../../assets/images/esseynote.png">{{aessey.notes}}
-  </p> -->
   <p class="content" v-html="aessey" v-highlight>
   </p>
 </div>
@@ -22,7 +15,7 @@ export default {
   },
   props:['getTitle'],
   async mounted(){
-    axios.get('/otheressey/es6函数参数默认值').then((Response)=>{
+    axios.get('/otherEssey/es6函数参数默认值').then((Response)=>{
        this.aessey = Response.data;
     })
     .catch((err)=>{
@@ -31,7 +24,7 @@ export default {
   },
   watch:{
     getTitle:function(newVal,oldVal){
-      axios.get('/otheressey/'+newVal).then((Response)=>{
+      axios.get('/otherEssey/'+newVal).then((Response)=>{
         this.aessey = Response.data;
       })
       .catch((err)=>{
@@ -42,13 +35,8 @@ export default {
 }
 </script>
 <style lang="less" scoped>
-  .aessey{
+ .aessey{
     margin-top: 20px;
-  }
-  .title{
-    font-size:18px;
-    font-weight: bolder;
-    // text-align: center;
   }
   .content{
      margin-top: 20px;
@@ -58,14 +46,5 @@ export default {
      font-family: Georgia, 'Times New Roman', Times, serif;
      letter-spacing: 1px;
  }
- .message{
-   font-size: 10px;
-   word-spacing: 15px;
-   color:#747778;
-   margin-top: 12px;
-   img {
-     width: 15px;
-     height: 15px;
-   }
- }
+
 </style>
